@@ -8,7 +8,9 @@
      
   stages {
    
-   def mvnHome = tool 'M3'
+        environment {
+    mvnHome = tool 'M3'
+  }
    
    stage('checkout') {
             steps {
@@ -29,6 +31,8 @@
          sh "${mvnHome}/bin/mvn test "
       }
     }
+   
+
 
   }
 }
