@@ -5,12 +5,12 @@
           
        }
      } 
-     
+  environment {
+   def  mvnHome = tool 'M3'
+  }
   stages {
    
      
-   def  mvnHome = tool 'M3'
- 
    
    stage('checkout') {
             steps {
